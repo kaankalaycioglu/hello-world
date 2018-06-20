@@ -11,7 +11,6 @@ game.on('gameover' , function(message){
 server.on('request',function(req,res){
 var page = url.parse(req.url).pathname;
 var params = querystring.parse(url.parse(req.url).query);
-console.log(page);
 res.writeHead(200, {"Content-Type" : "text/plain"});	
 if('isim' in params && 'soyisim' in params){
 	res.write('Isminiz' + ' ' + params['isim'] + ' ' +params['soyisim'] +' ' + 'tebrikler' + ' ');
